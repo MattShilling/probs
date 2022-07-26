@@ -27,7 +27,7 @@ const STYLE = [
         selector: 'node',
         style: {
             'background-color': '#2B65EC',
-            "background-opacity": "0.8",
+            "background-opacity": "0.7",
             "content": "data(name)",
             "font-size": "30px",
             "text-valign": "center",
@@ -61,8 +61,14 @@ const STYLE = [
     {
         selector: 'node:selected',
         style: {
-            'background-color': '#F08080',
-            'border-color': 'red',
+            "background-opacity": "0.9",
+        }
+    },
+
+    {
+        selector: 'node:selected:parent',
+        style: {
+            "background-opacity": 0.5,
         }
     },
 
@@ -82,7 +88,7 @@ function makeCyto(id, elements) {
                 desiredAspectRatio: this.width() / this.height()
             });
             this.nodes().forEach(function (node) {
-                let size = 100;
+                let size = 300;
                 node.css("width", size);
                 node.css("height", size);
             });
