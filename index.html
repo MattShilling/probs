@@ -20,14 +20,14 @@
   <style>
     body {
       font-family: helvetica neue, helvetica, liberation sans, arial, sans-serif;
-      font-size: 14px;
+      font-size: 18px;
     }
 
     #cy {
       position: relative;
       width: auto;
       height: 95%;
-      z-index: 999;
+      z-index: 1000;
       margin-bottom: 5%;
       right: 0px;
     }
@@ -35,28 +35,15 @@
   </style>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-
-      cytoscape({
-        container: document.getElementById('cy'),
-
-        ready: function () {
-          let layoutUtilities = this.layoutUtilities({
-            desiredAspectRatio: this.width() / this.height()
-          });
-          this.nodes().forEach(function (node) {
-            let size = 100;
-            node.css("width", size);
-            node.css("height", size);
-          });
-          this.layout({ name: 'fcose', animationEasing: 'ease-out' }).run();
-        },
-
-        style: STYLE,
-        elements: ELEMENTS,
-
-      }).layout(LAYOUT).run();
-    });
+    Promise.all([
+      fetch('probs.json')
+        .then(function (res) {
+          return res.json();
+        })
+    ])
+      .then(function (elements) {
+        makeCyto('cy', elements[0]);
+      })
   </script>
 </head>
 
