@@ -8,7 +8,7 @@ const LAYOUT = {
     packComponents: true,
     tile: true,
     nodeRepulsion: 4500.0,
-    idealEdgeLength: 50.0,
+    idealEdgeLength: 600.0,
     edgeElasticity: 0.45,
     nestingFactor: 0.1,
     gravity: 0.25,
@@ -43,6 +43,10 @@ const STYLE = [
     {
         selector: ':parent',
         style: {
+            "padding": 50,
+            "text-valign": "top",
+            "text-margin-y": 50,
+            "text-halign": "center",
             'background-opacity': 0.333,
             'border-color': '#2B65EC',
             'shape': 'round-rectangle',

@@ -29,5 +29,70 @@
             "name": "Federal City Council",
             "parent": "n0"
         }
+    },
+
+    {
+        "group": "nodes",
+        "data": {
+            "id": "n1",
+            "name": "Energy"
+        }
+    },
+    {
+        "group": "nodes",
+        "data": {
+            "id": "n1.1",
+            "name": "Helion Energy",
+            "parent": "n1"
+        }
+    },
+    {
+        "group": "nodes",
+        "data": {
+            "id": "n1.2",
+            "name": "Commonwealth Fusion",
+            "parent": "n1"
+        }
+    },
+    {
+        "group": "nodes",
+        "data": {
+            "id": "n1.3",
+            "name": "TAE Technologies",
+            "parent": "n1"
+        }
+    },
+
+    {
+        "group": "nodes",
+        "data": {
+            "id": "n2",
+            "name": "Housing & Energy"
+        }
+    },
+    {
+        "group": "nodes",
+        "data": {
+            "id": "n2.1",
+            "name": "RetrofitNY",
+            "parent": "n2"
+        }
+    },
+
+    {
+        "group": "edges",
+        "data": {
+            "id": "e0",
+            "source": "n1",
+            "target": "n2"
+        }
+    },
+    {
+        "group": "edges",
+        "data": {
+            "id": "e1",
+            "source": "n0",
+            "target": "n2"
+        }
     }
 ]
